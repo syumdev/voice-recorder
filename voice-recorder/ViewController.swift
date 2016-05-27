@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var _btnRecord: UIButton!
+    @IBOutlet weak var _lblTapToRecord: UILabel!
+    @IBOutlet weak var _btnStopRecording: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onBtnRecordClicked(sender: AnyObject) {
+    }
 
+    @IBAction func onBtnStopRecordingClicked(sender: AnyObject) {
+    }
+    
 }
 

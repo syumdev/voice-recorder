@@ -21,6 +21,9 @@
                                 <rect key="frame" x="276" y="285" width="49" height="30"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.63921568630000003" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="onBtnRecordClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iC4-Es-J9d"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoF-je-gnT">
                                 <rect key="frame" x="239" y="367" width="125" height="21"/>
@@ -31,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QzP-nh-vr5">
                                 <rect key="frame" x="248" y="419" width="106" height="30"/>
                                 <state key="normal" title="Stop Recording"/>
+                                <connections>
+                                    <action selector="onBtnStopRecordingClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vIP-gl-XfW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -43,6 +49,10 @@
                             <constraint firstItem="qoF-je-gnT" firstAttribute="centerX" secondItem="MRB-aG-acX" secondAttribute="centerX" id="vNc-Bk-Lke"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="_btnRecord" destination="MRB-aG-acX" id="Cvb-zu-7lc"/>
+                        <outlet property="_lblTapToRecord" destination="qoF-je-gnT" id="DWj-ES-Yeg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
