@@ -13,8 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var _btnRecord: UIButton!
     @IBOutlet weak var _lblTapToRecord: UILabel!
     @IBOutlet weak var _btnStopRecording: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        _btnStopRecording.enabled = false
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,9 +26,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onBtnRecordClicked(sender: AnyObject) {
+        _btnRecord.enabled=false
+        _lblTapToRecord.text = "Recording in Progress..."
+        _btnStopRecording.enabled=true
     }
 
     @IBAction func onBtnStopRecordingClicked(sender: AnyObject) {
+        _btnRecord.enabled=true
+        _lblTapToRecord.text="Tap To Record..."
+        _btnStopRecording.enabled=false
     }
     
 }
